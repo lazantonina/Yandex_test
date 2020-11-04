@@ -2,15 +2,28 @@ package com.example.testtask.fw;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.BrowserType;
 
 public class ApplicationManager {
     WebDriver wd;
     MainPageHelper mainPage;
     MarketHeaderHelper marketHeader;
     MarketItemHelper marketItem;
+    private String browser;
+
+    public ApplicationManager(String browser) {
+        this.browser = browser;
+    }
+
 
     public void init() {
-        wd = new ChromeDriver();
+        if(browser.equals(BrowserType.CHROME)){
+            wd = new ChromeDriver();
+        } else if (browser.equals(BrowserType.FIREFOX)) {
+            wd = new FirefoxDriver();
+        }
+
         wd.manage().window().maximize();
         openSite("https://yandex.ru/");
 

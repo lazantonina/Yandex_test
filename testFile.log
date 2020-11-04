@@ -1,0 +1,4 @@
+4296 [Test worker] INFO  com.example.testtask.tests.TestBase - Start test testItem
+16696 [Test worker] INFO  com.example.testtask.tests.TestBase - Stop test testItem
+11:29:56.761 [Test worker] INFO  com.example.testtask.tests.TestBase - Start test testItem
+11:30:09.226 [Test worker] INFO  com.example.testtask.tests.TestBase - Stop test testItem
